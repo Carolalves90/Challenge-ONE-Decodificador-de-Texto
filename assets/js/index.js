@@ -45,13 +45,10 @@ botaoCriptografar.addEventListener('click', function(){
     }
 })
 
-let botaoCopiar = document.getElementById('copiar')
-
-botaoCopiar.onclick = function(){
-    let texto = document.getElementById("saida-texto").value;
+function copiar() {
+    let texto = document.getElementById("saida-texto");
     texto.select();
-    texto.setSelectionRange(0, 99999)
-    Document.execCommand("copy")
+    document.execCommand("copy");
 
     alert("Texto copiado para área de transferência");
 }
